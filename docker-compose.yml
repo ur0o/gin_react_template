@@ -1,0 +1,19 @@
+version: '3'
+services:
+    gin:
+        build:
+            context: .
+            dockerfile: docker/gin/Dockerfile
+        volumes:
+            - "./src:/go/src"
+        ports:
+            - 8080:8080
+    react:
+        build:
+            context: .
+            dockerfile: docker/react/Dockerfile
+        volumes:
+            - "./react_app:/usr/src/app/react_app"
+        ports:
+            - "3000:3000"
+        command: sh -c "cd react_app && yarn start"
