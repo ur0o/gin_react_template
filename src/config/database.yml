@@ -1,7 +1,0 @@
-protocol: tcp
-host: host.lima.internal
-port: 3306
-name: sample
-user: root
-password: pass
-charset: utf8mb4
