@@ -7,7 +7,7 @@ import (
 )
 
 func SetRouting(e *gin.Engine) {
-	indices := e.Group("/")
+	indices := e.Group("/api")
 	{
 		indices.GET("/", controllers.Index)
 	}

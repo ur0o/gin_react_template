@@ -7,5 +7,7 @@ import (
 )
 
 func Index(c *gin.Context) {
-	c.String(http.StatusOK, "Hello, world")
+	c.JSON(http.StatusOK, gin.H{
+		"text": "Hello, world",
+	})
 }
