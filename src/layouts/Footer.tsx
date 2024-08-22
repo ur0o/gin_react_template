@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
 import { Link } from "react-router-dom"
 
@@ -8,10 +7,11 @@ export function Footer() {
     align-items: center;
     justify-content: center;
     position: absolute;
+    box-sizing: border-box;
+    top: auto;
     bottom: 0;
     padding: 16px 32px;
     width: 100%;
-    height: 48px;
     background-color: #2d2d2d;
     text-align: center;
   `
