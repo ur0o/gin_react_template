@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"gin_api/config"
+	"gin_api/database"
 )
 
 func main() {
@@ -10,6 +11,6 @@ func main() {
 
 	config.SetHeader(engine)
 	config.SetRouting(engine)
-	config.InitDB()
+	database.InitDB()
 	engine.Run(":8080")
 }
