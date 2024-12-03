@@ -11,9 +11,13 @@ export function Header() {
   const HeaderLinkStyle = css`
     color: white;
     font-size: 1.6rem;
+
+    &:hover {
+      color: white;
+    }
   `
 
   return <div css={HeaderStyle}>
-    <Link css={HeaderLinkStyle} to="/">Header</Link>
+    <Link css={HeaderLinkStyle} to="/">Template</Link>
   </div>
 }
