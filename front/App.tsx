@@ -6,6 +6,7 @@ import { css } from '@emotion/react'
 export default function App() {
   const ContainerStyle = css`
     max-width: 1080px;
+    margin: 0 auto;
   `;
 
   return <>
