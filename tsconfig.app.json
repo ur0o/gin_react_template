@@ -27,5 +27,5 @@
   "types": [
     "@emotion/react/types/css-prop"
   ],
-  "include": ["src"]
+  "include": ["front"]
 }
