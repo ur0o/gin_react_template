@@ -3,7 +3,7 @@ package config
 import (
 	"github.com/gin-gonic/gin"
 
-	"gin_api/controllers"
+	"gin_react_template/controllers"
 )
 
 func SetRouting(e *gin.Engine) {

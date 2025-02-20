@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"gin_api/config"
-	"gin_api/database"
+	"gin_react_template/config"
+	"gin_react_template/database"
 )
 
 func main() {

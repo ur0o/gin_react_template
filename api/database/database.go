@@ -36,7 +36,10 @@ func Close() {
 }
 
 func readConfig() (config *DBConfig) {
-	b, _ := os.ReadFile("config/database.yml")
+	b, err := os.ReadFile("database/database.yml")
+	if err != nil {
+		panic(err)
+	}
 	yaml.Unmarshal(b, &config)
 
 	return

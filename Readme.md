@@ -7,20 +7,18 @@ Dockerを使ったGo(Gin)+Typescript(React)でアプリケーションを作る�
 
 ```
 cd src \
-&& go mod init gin_react_template \
+&& go mod init (プロジェクト名) \
 && go mod tidy \
 && cd ..
 ```
 
-```
-docker-compose build
-```
+プロジェクト内の`gin_react_template`をプロジェクト名に置き換え
 
 ```
-docker-compose run --rm react sh -c 'npx create-react-app react_app --template typescript'
+docker compose build
 ```
 
 ### 起動
 ```
-docker-compose up
+docker compose up
 ```
