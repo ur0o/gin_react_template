@@ -3,19 +3,13 @@ import { Link } from "react-router-dom"
 
 export function Footer() {
   const height = 80;
-  const MarginStyle = css`
-    margin-top: ${height}px;
-    width: 100%;
-    height: 0;
-  `;
   const FooterStyle = css`
+    position: sticky;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
     box-sizing: border-box;
-    top: auto;
-    bottom: 0;
+    top: 100vh;
     height: ${height}px;
     padding: 16px 32px;
     width: 100%;
@@ -24,7 +18,6 @@ export function Footer() {
   `
 
   return <>
-    <div css={MarginStyle} />
     <div css={FooterStyle}>
       <LinkGroup>
         <FooterLink to="/" text="Home" />
