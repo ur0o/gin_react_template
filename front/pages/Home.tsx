@@ -1,8 +1,7 @@
-import { BaseUrl } from "../utils/api_config";
-import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
+import { fetchContent } from "../utils/api";
 
-type textResponse = {
+type TextResponse = {
   text: string
 }
 
@@ -10,19 +9,12 @@ export function Home() {
   const [text, setText] = useState("");
 
   useEffect(() => {
-    fetchText();
+    if (text !== "") return;
+    (async function() {
+      const t = await fetchContent<TextResponse>("/");
+      if (t) setText(t.text);
+    })();
   }, [])
-
-  function fetchText() {
-    const options: AxiosRequestConfig = {
-      url: BaseUrl + "/",
-      method: "GET"
-    }
-    axios(options).then((res: AxiosResponse<textResponse>) => {
-      const { data } = res;
-      setText(data.text)
-    })
-  }
 
   return (<>
     <h2>{text}</h2>
