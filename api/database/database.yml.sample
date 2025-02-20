@@ -1,7 +1,7 @@
 protocol: tcp
 host: host.docker.internal
 port: 3306
-name: sample
+name: ai_saizeriya_arranger
 user: root
 password: pass
 charset: utf8mb4
